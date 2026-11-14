@@ -1,42 +1,47 @@
 import Image from "next/image";
 import { PageContainer } from "@/components/layout/page-container";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function IntroductionSection() {
   return (
-    <section className="pt-[240px] pb-[100px]">
-      <PageContainer className="grid items-start gap-[67px] md:grid-cols-[705px_560px]">
-        <div className="pt-[14px]">
-          <h2 className="flex flex-wrap items-baseline gap-x-3 text-[48px] font-semibold leading-[normal] tracking-[-1.92px]">
+    <section className="pt-16 pb-12 md:pt-[240px] md:pb-[100px]">
+      <PageContainer className="grid items-start gap-8 xl:grid-cols-[minmax(0,705px)_minmax(0,560px)] xl:gap-[67px]">
+        <ScrollReveal className="order-1 xl:col-start-1 xl:row-start-1">
+          <h2 className="flex flex-wrap items-baseline gap-x-2 pt-0 text-3xl font-semibold leading-[1.12] tracking-[-1.2px] md:gap-x-3 md:text-[48px] md:leading-[normal] md:tracking-[-1.92px] xl:pt-[14px]">
             <span>Sambutan Kyai</span>
-            <em className="text-[40px] font-normal tracking-[-1.6px]">
+            <em className="text-2xl font-normal tracking-[-0.8px] md:text-[40px] md:tracking-[-1.6px]">
               Muhammad Luky Keren
             </em>
           </h2>
-          <div className="mt-[94px] max-w-[705px] space-y-[34px] text-[24px] font-medium leading-[normal] tracking-[-0.96px] text-black/75">
+        </ScrollReveal>
+        <ScrollReveal delayMs={140} className="order-2 xl:col-start-2 xl:row-span-2 xl:row-start-1">
+          <Image
+            src="/assets/home/introduction.png"
+            alt="Sambutan Kyai Muhammad Luky Keren"
+            width={560}
+            height={560}
+            className="aspect-square h-auto w-full max-w-[560px] rounded-[9px] object-cover xl:h-[560px] xl:w-[560px]"
+          />
+        </ScrollReveal>
+        <ScrollReveal className="order-3 max-w-[705px] text-base font-medium leading-relaxed tracking-normal text-black/75 md:text-[24px] md:leading-[normal] md:tracking-[-0.96px] xl:col-start-1 xl:row-start-2 xl:mt-[94px]">
+          <div className="space-y-5 md:space-y-[34px]">
             <p>
               Puji syukur ke hadirat Allah Swt. atas rahmat, taufik, dan
               hidayah-Nya, sehingga pada malam ini kita dapat berkumpul di
               kediaman Bapak/Ibu [Sebutkan Nama] untuk melaksanakan kegiatan
-              [Sebutkan Nama Acara, misal: pengajian rutin] tanpa halangan suatu
-              apa pun. Selawat serta salam senantiasa tercurah kepada junjungan
-              kita Nabi Muhammad saw. yang telah membawa kita menuju cahaya
-              kebenaran, yakni agama Islam.
+              [Sebutkan Nama Acara, misal: pengajian rutin] tanpa halangan
+              suatu apa pun. Selawat serta salam senantiasa tercurah kepada
+              junjungan kita Nabi Muhammad saw. yang telah membawa kita menuju
+              cahaya kebenaran, yakni agama Islam.
             </p>
             <p>
               Mewakili pengurus [Sebutkan Nama Organisasi/Panitia], kami
               mengucapkan terima kasih kepada Bapak/Ibu Kyai [Sebutkan Nama]
-              yang berkenan hadir untuk memberikan mauidhatul hasanah (nasihat
-              baik) kepada kita semua.
+              yang berkenan hadir untuk memberikan mauidhatul hasanah
+              (nasihat baik) kepada kita semua.
             </p>
           </div>
-        </div>
-        <Image
-          src="/assets/home/introduction.png"
-          alt="Sambutan Kyai Muhammad Luky Keren"
-          width={560}
-          height={560}
-          className="h-[560px] w-[560px] rounded-[9px] object-cover"
-        />
+        </ScrollReveal>
       </PageContainer>
     </section>
   );

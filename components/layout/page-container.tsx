@@ -5,7 +5,7 @@ export function PageContainer({
 }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={`mx-auto w-full max-w-[1440px] px-[54px] ${className}`}
+      className={`mx-auto w-full max-w-[1440px] px-6 md:px-[54px] ${className}`}
       {...props}
     />
   );

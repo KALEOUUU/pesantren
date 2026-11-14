@@ -11,14 +11,18 @@ export function MobileNavigation() {
   return (
     <nav
       aria-label="Navigasi mobile"
-      className="flex flex-col gap-5 border-t border-olive-dark/15 py-5 md:hidden"
+      className="flex flex-col gap-7 py-6 md:hidden"
     >
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
           aria-current={pathname === link.href ? "page" : undefined}
-          className={`text-lg ${pathname === link.href ? "font-bold" : "font-medium"}`}
+          onClick={(event) => {
+            const menu = event.currentTarget.closest("details");
+            if (menu) menu.open = false;
+          }}
+          className={`text-[22px] leading-tight transition-colors duration-200 hover:text-olive focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive motion-reduce:transition-none ${pathname === link.href ? "font-semibold text-olive" : "font-medium text-foreground"}`}
         >
           {link.label}
         </Link>

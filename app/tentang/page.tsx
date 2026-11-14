@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { AboutAchievements } from "@/components/tentang/about-achievements";
 import { AboutFacilities } from "@/components/tentang/about-facilities";
 import { AboutHero } from "@/components/tentang/about-hero";
-import { Accreditation } from "@/components/tentang/accreditation";
 import { VisionMission } from "@/components/tentang/vision-mission";
 import { HomeCTA } from "@/components/home/home-cta";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export const metadata: Metadata = {
   title: "Tentang Kami | Pondok Pesantren Daarul Mukhlisin",
@@ -18,7 +18,9 @@ export default function TentangPage() {
       <VisionMission />
       <AboutAchievements />
       <AboutFacilities />
-      <HomeCTA />
+      <ScrollReveal>
+        <HomeCTA />
+      </ScrollReveal>
     </>
   );
 }

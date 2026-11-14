@@ -15,6 +15,7 @@ export function AchievementSection() {
     const baseImage = baseImageRef.current;
     const changedImage = changedImageRef.current;
     if (!section || !sticky || !baseImage || !changedImage) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let frame = 0;
     const updateProgress = () => {
@@ -53,11 +54,11 @@ export function AchievementSection() {
     <section
       ref={sectionRef}
       aria-label="Pencapaian Pondok"
-      className="relative my-6 h-[90svh] md:my-10 md:h-[105svh]"
+      className="relative my-4 h-[34svh] md:my-10 md:h-[105svh]"
     >
       <div
         ref={stickyRef}
-        className="sticky top-[20svh] flex h-[60svh] items-center justify-center md:top-[17.5svh] md:h-[65svh]"
+        className="sticky top-[12svh] flex h-[20svh] items-center justify-center md:top-[17.5svh] md:h-[65svh]"
       >
         <div className="relative left-1/2 aspect-[1550/413] w-screen max-w-[1550px] -translate-x-1/2 overflow-hidden">
         <Image
