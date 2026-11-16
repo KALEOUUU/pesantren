@@ -8,7 +8,8 @@ export function HomeCTA() {
         <div className="relative isolate grid min-h-[340px] grid-cols-1 gap-7 overflow-hidden rounded-[18px] bg-[linear-gradient(100deg,#86846e_0%,#aaa78a_50%,#d9d4ae_100%)] px-6 py-7 text-white md:min-h-[380px] md:gap-6 lg:min-h-[420px] lg:grid-cols-[minmax(0,1fr)_auto] lg:grid-rows-[1fr_auto] lg:gap-8 lg:px-12 lg:py-12 xl:min-h-[450px] xl:px-[90px] xl:py-[54px]">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-0 bg-[url('/assets/home/patterb.png')] bg-repeat opacity-[0.19] [background-size:133px_145px]"
+            className="pointer-events-none absolute inset-0 z-0 bg-repeat opacity-[0.19] [background-size:133px_145px]"
+            style={{ backgroundImage: "url(/assets/home/patterb.png)" }}
           />
           <h2 className="relative z-10 max-w-[700px] text-[28px] font-semibold leading-[1.14] tracking-[-1.1px] md:text-[36px] md:tracking-[-1.4px] lg:col-span-2 lg:row-start-1 lg:text-[42px] lg:tracking-[-1.7px] xl:text-[48px] xl:tracking-[-1.92px]">
             Berikan masa depan dengan akhlakul kharimah!
