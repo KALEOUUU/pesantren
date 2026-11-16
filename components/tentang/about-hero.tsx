@@ -9,7 +9,7 @@ export function AboutHero() {
         <div className="grid items-start gap-7 md:gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:grid-cols-[minmax(0,600px)_minmax(0,1fr)] xl:gap-[128px]">
           <ScrollReveal>
             <Image
-              src="/assets/home/introduction.png"
+              src="/assets/tentang/khutbatuarsy.jpg"
               alt="Kyai Pondok Pesantren Daarul Mukhlisin"
               width={560}
               height={560}
