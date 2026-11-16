@@ -22,7 +22,7 @@ export function AchievementSection() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         const scrollRange = section.offsetHeight - sticky.offsetHeight;
-        const stickyOffset = (window.innerHeight - sticky.offsetHeight) / 2;
+        const stickyOffset = Number.parseFloat(window.getComputedStyle(sticky).top) || 0;
         const progress =
           scrollRange > 0
             ? Math.min(
@@ -54,11 +54,11 @@ export function AchievementSection() {
     <section
       ref={sectionRef}
       aria-label="Pencapaian Pondok"
-      className="relative my-4 h-[34svh] md:my-10 md:h-[105svh]"
+      className="relative my-3 h-[24svh] md:my-4 md:h-[58svh] xl:my-6 xl:h-[64svh]"
     >
       <div
         ref={stickyRef}
-        className="sticky top-[12svh] flex h-[20svh] items-center justify-center md:top-[17.5svh] md:h-[65svh]"
+        className="sticky top-[8svh] flex h-[16svh] items-center justify-center md:top-[9svh] md:h-[44svh] xl:top-[8svh] xl:h-[46svh]"
       >
         <div className="relative left-1/2 aspect-[1550/413] w-screen max-w-[1550px] -translate-x-1/2 overflow-hidden">
         <Image

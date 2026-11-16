@@ -19,17 +19,17 @@ export default function HomePage() {
       <ScrollReveal>
         <IntroductionSection />
       </ScrollReveal>
-      <section id="program-akademik" className="py-12 md:py-24">
+      <section id="program-akademik" className="py-12 md:py-16 xl:py-24">
         <PageContainer>
           <ScrollReveal className="text-left md:text-center">
             <p className="text-left text-base font-medium leading-[1.14] text-olive-secondary md:text-center md:text-2xl">
               Keunggulan Kami
             </p>
-            <h2 className="mt-1 text-left text-4xl font-semibold tracking-[-1.6px] md:mt-2 md:text-center md:text-[64px] md:tracking-[-2.56px]">
+            <h2 className="mt-1 text-left text-4xl font-semibold tracking-[-1.6px] md:mt-2 md:text-center md:text-5xl md:tracking-[-2px] xl:text-[64px] xl:tracking-[-2.56px]">
               Program Akademik
             </h2>
           </ScrollReveal>
-          <div className="mt-9 space-y-10 md:mt-16 md:space-y-[81px]">
+          <div className="mt-9 space-y-10 md:mt-8 md:space-y-7 xl:mt-16 xl:space-y-[81px]">
             {academicPrograms.map((program, index) => (
               <ScrollReveal key={program.title} delayMs={index * 100}>
                 <AcademicProgram program={program} />

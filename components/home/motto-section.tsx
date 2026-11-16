@@ -25,14 +25,18 @@ export function MottoSection() {
             Motto Pesantren
           </h2>
         </ScrollReveal>
-        <div className="mx-auto mt-9 grid max-w-[1286px] gap-7 md:mt-[64px] md:grid-cols-3 md:gap-[54px]">
+        <div className="mx-auto mt-9 grid max-w-[1286px] gap-7 md:mt-12 md:grid-cols-2 md:gap-8 lg:mt-[64px] lg:grid-cols-3 lg:gap-8 xl:gap-[54px]">
           {mottos.map((motto, index) => (
-            <ScrollReveal key={motto.title} delayMs={index * 100}>
+            <ScrollReveal
+              key={motto.title}
+              delayMs={index * 100}
+              className={index === 2 ? "md:col-span-2 md:mx-auto md:max-w-[calc(50%-1rem)] lg:col-span-1 lg:mx-0 lg:max-w-none" : ""}
+            >
               <article>
-                <h3 className="text-[24px] font-medium leading-[1.14] tracking-[-0.8px] md:text-[40px] md:tracking-[-1.6px]">
+                <h3 className="text-[24px] font-medium leading-[1.14] tracking-[-0.8px] md:text-[30px] md:tracking-[-1.1px] xl:text-[40px] xl:tracking-[-1.6px]">
                   {motto.title}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed tracking-[-0.3px] text-black/75 md:mt-[30px] md:text-[20px] md:leading-[normal] md:tracking-[-0.8px]">
+                <p className="mt-3 text-base leading-relaxed tracking-[-0.3px] text-black/75 md:mt-4 md:text-[17px] md:leading-[1.4] md:tracking-[-0.45px] xl:mt-[30px] xl:text-[20px] xl:leading-[normal] xl:tracking-[-0.8px]">
                   {motto.text}
                 </p>
               </article>

@@ -25,7 +25,7 @@ export function SiteHeader() {
           </Link>
           <DesktopNavigation />
           <div className="hidden md:block">
-            <Button href="/pendaftaran" variant="header">
+            <Button href="https://docs.google.com/forms/d/e/1FAIpQLSenfFS8_aLOzk14wAgZkMsp7DKVs0DZ-FUDQWGYxcUzg5jZIQ/viewform" variant="header" className="!px-5 !py-2 !text-lg xl:!px-[27px] xl:!py-3 xl:!text-2xl">
               Daftar Sekarang
             </Button>
           </div>

@@ -14,7 +14,7 @@ export function AcademicProgram({ program }: { program: AcademicProgramData }) {
         height={360}
         className="aspect-[700/360] h-auto w-full rounded-[9px] object-cover xl:h-[360px] xl:w-[700px]"
       />
-      <div className="flex min-h-full flex-col items-start pt-0.5 md:min-h-[360px]">
+      <div className="flex min-h-full flex-col items-start pt-0.5 xl:min-h-[360px]">
         <h3 className="text-[22px] font-medium leading-[1.14] tracking-[-0.8px] md:text-[28px] md:tracking-[-1.12px] xl:text-[40px] xl:tracking-[-1.6px]">
           {program.title}
         </h3>

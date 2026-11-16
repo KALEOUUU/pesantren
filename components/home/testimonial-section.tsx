@@ -14,11 +14,11 @@ export function TestimonialSection() {
         <ScrollReveal>
           <h2 className="text-left text-4xl font-semibold tracking-[-1.92px] md:text-center md:text-[64px]">Testimoni Alumni</h2>
         </ScrollReveal>
-        <div className="mt-8 grid gap-8 md:mt-12 md:grid-cols-2 md:gap-[80px]">
+        <div className="mt-8 grid gap-8 md:mt-10 lg:grid-cols-2 lg:gap-10 xl:mt-12 xl:gap-[80px]">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.name} delayMs={index * 120}>
-              <article className="grid items-start gap-4 transition-transform duration-300 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none sm:grid-cols-[minmax(0,375px)_minmax(0,1fr)] sm:gap-6">
-                <Image src={testimonial.image} alt={testimonial.name} width={375} height={400} className="h-[230px] w-full rounded-[9px] object-cover md:h-[400px]" />
+              <article className="grid items-start gap-4 transition-transform duration-300 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-5 xl:grid-cols-[minmax(0,375px)_minmax(0,1fr)] xl:gap-6">
+                <Image src={testimonial.image} alt={testimonial.name} width={375} height={400} className="h-[230px] w-full rounded-[9px] object-cover lg:h-[280px] xl:h-[400px]" />
                 <div className="flex h-full flex-col">
                   <h3 className="text-[24px] font-medium leading-[1.14] tracking-[-0.96px] md:text-[32px]">{testimonial.name}</h3>
                   <div className="mt-auto pb-1">
