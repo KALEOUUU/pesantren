@@ -4,7 +4,10 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { RouteMotionBoundary } from "@/components/layout/route-motion-boundary";
 
-export const metadata: Metadata = { title: "Pesantren", description: "Pondok pesantren dengan pendidikan agama dan ilmu umum." };
+export const metadata: Metadata = {
+  title: "Pesantren",
+  description: "Pondok pesantren dengan pendidikan agama dan ilmu umum.",
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
